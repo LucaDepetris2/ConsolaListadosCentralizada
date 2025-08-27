@@ -42,6 +42,7 @@ function createCategoryElement(node, originModule) {
         optEl.textContent = node.name;
         optEl.draggable = true;
         optEl.dataset.id = node.id;
+        optEl.dataset.module = originModule; // <- necesario para el menú contextual
 
         optEl.addEventListener('click', () => openFilterModal(node.name));
         optEl.addEventListener('dragstart', (e) => {
