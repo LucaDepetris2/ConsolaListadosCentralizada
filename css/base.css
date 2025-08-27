@@ -1,0 +1,24 @@
+:root {
+    --fs-base: 14px;
+    --border-dark: #7f7f7f;
+    --border-light: #ffffff;
+    --color-bg: #e5e5e5;
+    --color-panel-header: #d0d0d0;
+    --color-active: #2a5caa;
+    --color-category: #f4f1f9;
+    --color-final: #eaf7e6;
+    --color-group-header: #c8dfff;
+    --color-group-bg: #f7f7f7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #c0c0c0;
+    font-size: var(--fs-base);
+}

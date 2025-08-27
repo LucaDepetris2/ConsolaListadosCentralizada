@@ -1,0 +1,91 @@
+/* Contenedor principal */
+.console-window {
+    width: 1000px;
+    margin: 20px auto;
+    background: var(--color-bg);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de módulos */
+.modules-bar {
+    display: flex;
+    border-bottom: 1px solid var(--border-dark);
+    background: #d7d7d7;
+}
+
+.modules-bar .module {
+    padding: 8px 14px;
+    border-right: 1px solid var(--border-dark);
+    cursor: pointer;
+    user-select: none;
+}
+
+.modules-bar .module:last-child {
+    border-right: 0;
+}
+
+.modules-bar .module.active {
+    background: var(--color-active);
+    color: #fff;
+    font-weight: bold;
+}
+
+.modules-bar .module:hover:not(.active) {
+    background: #ececec;
+}
+
+/* Layout de paneles */
+.main-content {
+    display: flex;
+    min-height: 600px;
+}
+
+.categories-panel,
+.groups-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-dark);
+}
+
+.groups-panel {
+    border-right: 0;
+}
+
+/* Encabezados de panel */
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    background: var(--color-panel-header);
+    border-bottom: 1px solid var(--border-dark);
+    font-weight: bold;
+}
+
+.panel-add-btn {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--border-dark);
+    background: linear-gradient(var(--border-light), #dcdcdc);
+    padding: 0;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.panel-add-btn:hover {
+    background: linear-gradient(#efefef, #cccccc);
+}
+
+/* Listas internas */
+.categories-list,
+.groups-list {
+    flex: 1;
+    overflow: auto;
+    padding: 6px;
+}

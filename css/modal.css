@@ -1,0 +1,109 @@
+/* Modal de filtros */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal[hidden] {
+    display: none !important;
+}
+
+.modal-content {
+    width: 640px;
+    background: var(--color-bg);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: var(--color-panel-header);
+    border-bottom: 1px solid var(--border-dark);
+    font-weight: bold;
+}
+
+.modal-title {
+    flex: 1;
+}
+
+.modal-close {
+    border: 1px solid var(--border-dark);
+    background: linear-gradient(var(--border-light), #dcdcdc);
+    padding: 2px 6px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-close:hover {
+    background: linear-gradient(#efefef, #cccccc);
+}
+
+.modal-body {
+    padding: 12px;
+    background: #f9f9f9;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Formulario de filtros */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-field label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field select {
+    padding: 4px 6px;
+    border: 1px solid var(--border-dark);
+    font-size: 14px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.form-actions .btn {
+    border: 1px solid var(--border-dark);
+    background: linear-gradient(var(--border-light), #dcdcdc);
+    padding: 4px 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.form-actions .btn:hover {
+    background: linear-gradient(#efefef, #cccccc);
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.btn.primary {
+    font-weight: 600;
+}

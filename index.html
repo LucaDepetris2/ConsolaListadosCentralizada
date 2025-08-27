@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consola de Listados</title>
+
+  <!-- Estilos divididos -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+  <div class="console-window">
+    <div id="modules-bar" class="modules-bar"></div>
+
+    <div class="main-content">
+      <div class="categories-panel">
+        <div class="panel-header">
+          <span>Categorías</span>
+        </div>
+        <div id="categories-list" class="categories-list"></div>
+      </div>
+
+      <div class="groups-panel">
+        <div class="panel-header">
+          <span>Grupos personalizados</span>
+          <div class="mini-hint">➜ Creá un grupo con “+” y arrastrá listados</div>
+          <button id="add-group-btn" class="panel-add-btn" title="Crear grupo">+</button>
+        </div>
+        <div id="groups-list" class="groups-list"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal de filtros -->
+  <div id="filter-modal" class="modal" hidden>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <span id="modal-title" class="modal-title"></span>
+        <button id="modal-close" class="modal-close" title="Cerrar">✕</button>
+      </div>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Diálogo genérico (remplaza prompt/confirm nativos) -->
+  <div id="dialog-modal" class="modal" hidden>
+    <div class="modal-content dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+      <div class="modal-header">
+        <span id="dialog-title" class="modal-title">Acción</span>
+        <button id="dialog-close" class="modal-close" title="Cerrar">✕</button>
+      </div>
+      <div id="dialog-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- JS modular (usar type=module) -->
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
